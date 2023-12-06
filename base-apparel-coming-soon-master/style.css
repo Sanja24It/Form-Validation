@@ -1,0 +1,319 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&display=swap');
+
+body{
+    margin: 0;
+   
+    font-family: 'Josefin Sans', sans-serif;
+    
+}
+.container{
+    margin: 150px auto;
+    width: 1100px;
+    display: grid;
+   grid-template-columns: 1fr 1fr;
+   grid-template-rows: 1fr 4fr;
+   column-gap:60px;
+
+   
+    grid-template-areas: 'header aside aside'
+                ' main aside aside';
+   
+    background-image: url(./images/bg-pattern-desktop.svg); 
+  
+ 
+}
+.header {
+   
+   
+    grid-area: header;
+    
+
+}
+.logo{
+    margin-left: 50px;
+    margin-top: 25px;
+}
+
+
+.main{
+ 
+ grid-area: main;
+
+}
+
+
+h1{
+    display: flex;
+    flex-direction: column;
+    font-size: 65px;
+    text-transform: uppercase;
+    color: hsl(0, 6%, 24%);
+    letter-spacing: 8px;
+    margin-left: 50px;
+    
+
+}
+
+.firstWord{
+    font-weight: 300;
+    color:hsl(0, 36%, 70%);
+}
+
+
+p{
+    color:hsl(0, 36%, 70%); 
+    line-height: 1.5;
+    margin-left: 50px;
+    
+    
+}
+
+.aside{
+    
+    grid-area: aside;
+    
+}
+
+.aside img{
+   max-width: 100%;
+   vertical-align: bottom;
+   
+}
+
+
+.icon{
+    text-align: center;
+    color:  hsl(0, 100%, 98%);
+}
+
+.inputArea{
+    position: absolute;
+}
+
+
+
+
+
+.inputemail{
+    position: relative;
+    left: 20px;
+  
+}
+
+
+
+.email{
+    padding: 10px;
+    border-radius: 25px;
+    width: 300px;
+    margin-left: 10px;
+    left: 45px;
+   
+
+    border: 1px solid hsl(0, 36%, 70%);
+    position: absolute;
+}
+.email:focus{
+   outline: none;
+}
+.icon_err{
+    visibility: hidden;
+}
+
+
+.err{
+    
+    color: red;
+    position: relative;
+    left: 280px;
+    top: 2px;
+    visibility: visible;
+   
+    
+
+}
+
+.mess_err{
+    color: red;
+  
+   
+    
+}
+
+
+.btn{
+
+    background: linear-gradient(hsl(0, 80%, 86%),  hsl(0, 74%, 74%));
+    border: none;
+    position: relative;
+    left: 290px;
+ 
+    border-radius: 25px;
+    width: 70px;
+    padding: 11px;
+   
+    cursor: pointer;
+    
+
+}
+
+.btn:hover{
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+   
+}
+
+
+
+
+
+
+
+
+
+
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+
+
+@media screen and (min-width: 375px) and (max-width: 608px) {
+    .container{
+        margin: 150px auto;
+        width: 80%;
+        display: grid;
+   
+       grid-template-columns: 1fr ;
+       grid-template-rows: 1fr ;
+    
+     
+       
+        grid-template-areas: 'header header header'
+                    ' aside aside aside'
+                    'main main main';
+       
+        background-image: url(./images/bg-pattern-desktop.svg); 
+      
+     
+    }
+
+    .header {
+   
+        
+        grid-area: header;
+        padding: 20px;
+    
+    }
+    .logo{
+       margin-left: 15px;
+     text-align: center;
+    }
+    
+    
+    .main{
+     
+     
+      
+      padding: 60px;
+    
+      grid-area: main;
+     
+    }
+    h1{
+       
+      font-size: 40px;
+      margin: 15px 0;
+      text-align: center;
+      
+       
+        
+    }
+    
+  
+
+    p{
+    text-align: center;
+      margin: 15px 0;
+    }
+
+    .secondWord{
+        align-self: center;
+    }
+
+    
+    
+    .aside{
+        
+        grid-area: aside;
+        
+    }
+    .inputArea{
+        width: 100%;
+        position: absolute;
+        left: 18%;
+        
+    }
+    
+
+
+    .inputemail{
+     
+        position: relative;
+       bottom: 15px;
+       left: -22%;
+       
+    }
+
+
+
+    
+.email{
+ 
+   width: 50%;
+   position: absolute;
+   left: 0;
+   
+
+}
+
+
+
+.err{
+    
+    color: red;
+    position: relative;
+    left: 40%;
+    top: 2px;
+   
+   
+    
+
+}
+
+.mess_err{
+    color: red;
+  
+   
+    
+}
+
+
+.btn{
+
+    left: 42%;
+   
+    
+ 
+    width: 70px;
+    padding: 11px;
+   
+    cursor: pointer;
+    
+
+}
+
+.btn:hover{
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+}
+

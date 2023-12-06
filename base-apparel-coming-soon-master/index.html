@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-Avb2QiuDEEvB4bZJYdft2mNjVShBftLdPG8FJ0V7irTLQ8Uo0qcPxh4Plq7G5tGm0rU+1SPhVotteLpBERwTkw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+ 
+
+  <link rel="stylesheet" href="./style.css">
+  
+  <title>Frontend Mentor | Base Apparel coming soon page</title>
+
+ 
+</head>
+<body>
+ <div class="container">
+    
+  <header class="header">
+        <img src="./images/logo.svg" alt="" class="logo">
+    </header>
+    <main class="main">
+        
+      
+        <h1><span class="firstWord">We're </span ><span class='secondWord'>coming</span> <span>soon</span></h1>
+
+        <p>Hello fellow shoppers! We're currently building our new fashion store. 
+        Add your email below to stay up-to-date with announcements and our launch deals.</p>
+      <form class="inputArea">
+        
+      <input class="email" type="email" placeholder="Email Address">
+      <i class="fa-solid fa-circle-exclamation icon_err "></i>
+      
+      
+      
+      <button class="btn"><i class="fa-solid fa-chevron-right icon"></i></button>
+    
+        <small class="inputemail">
+      
+        </small>
+         </form> 
+    </main>
+
+ 
+<aside class="aside">
+<img src="./images/hero-desktop.jpg" alt="">
+</aside>
+ 
+  </div>
+
+    <p class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="https://github.com/Sanja24It">SanjaJov</a>.
+    </p>
+  </footer>
+</body>
+
+<script>
+  const btn = document.querySelector('.btn')
+  const inputVal = document.querySelector('.email')
+  const inputemailDiv = document.querySelector('.inputemail')
+  const emailLetter = /^[a-zA-Z0-9.!$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+  
+  let icon_err = document.querySelector('.fa-circle-exclamation')
+
+ 
+
+  btn.addEventListener('click', function(){
+    if(inputVal.value.match(emailLetter)){
+   
+     inputVal.style.borderColor = 'green';
+
+    
+
+
+    }
+    else{
+      icon_err.classList.add('err')
+      inputVal.style.borderColor = 'red';
+      inputemailDiv.innerHTML = `<p class='mess_err'>Please enter a valid email</p>`
+      inputemailDiv.classList.add(mess_err)
+   
+    
+}
+      
+     
+    
+  })
+
+ 
+  
+</script>
+</html>
